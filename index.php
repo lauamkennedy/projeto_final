@@ -25,19 +25,21 @@
         h1 {
             font-size: 3rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            margin-bottom: 10px;
+            margin-bottom: 50px;
         }
 
-        p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 40px;
+        .center-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
         }
 
         .card-menu {
             background: white;
             border-radius: 15px;
             padding: 30px;
+            width: 350px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.3);
             transition: transform .2s, box-shadow .2s;
         }
@@ -73,25 +75,15 @@
 <body>
     <div class="container">
         <h1><i class="fas fa-car"></i> Gestão de Veículos</h1>
-        <p>Bem-vindo! Escolha uma opção abaixo para continuar.</p>
 
-        <div class="row g-4 mt-4">
-            <div class="col-md-6">
-                <div class="card-menu">
-                    <i class="fas fa-plus-circle"></i>
-                    <h3>Cadastrar Veículos</h3>
-                    <a href="cadastro-veiculos.php" class="btn-acesso">Cadastrar</a>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="card-menu">
-                    <i class="fas fa-list"></i>
-                    <h3>Listar Veículos</h3>
-                    <a href="veiculos-cadastrados.php" class="btn-acesso">Ver Lista</a>
-                </div>
+        <div class="center-box">
+            <div class="card-menu">
+                <i class="fas fa-list"></i>
+                <h3>Listar Veículos</h3>
+                <a href="veiculos-cadastrados.php" class="btn-acesso">Ver Lista</a>
             </div>
         </div>
+
     </div>
 </body>
 </html>
