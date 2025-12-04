@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["logado"]) || $_SESSION["logado"] !== true) {
+    header("Location: login.php"); 
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,7 +20,10 @@
 
     <nav>
         <a href="?pg=index">Inicio</a>
-        <a href="?pg=veiculos">Veiculos Cadastrados</a>
+        <a href="?pg=cadastro-veiculos">Cadastrar Veiculos</a>
+        <a href="?pg=veiculos-cadastrados-admin">Veiculos Cadastrados</a>
+        <a href="?pg=cadastro-login">Cadastro de Usuario</a>
+        <a href="logout.php">Sair</a>
     </nav>
 </body>
 </html>
@@ -32,4 +44,3 @@
         echo "<h3>Página não encontrada!</h3>";
     }
 ?>
-
