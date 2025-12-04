@@ -114,6 +114,7 @@ while ($row = mysqli_fetch_assoc($resultado)) {
                             <th>Modelo</th>
                             <th>Ano</th>
                             <th>Valor</th>
+                            <th>Cadastrado por</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -123,6 +124,7 @@ while ($row = mysqli_fetch_assoc($resultado)) {
                             <td><?= htmlspecialchars($veiculo['modelo']) ?></td>
                             <td><?= htmlspecialchars($veiculo['ano']) ?></td>
                             <td><?= htmlspecialchars($veiculo['placa']) ?></td>
+                            <td><?= htmlspecialchars($veiculo['cadastrador']) ?></td>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>

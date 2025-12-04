@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04/12/2025 às 00:30
+-- Tempo de geração: 04/12/2025 às 22:47
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -55,17 +55,17 @@ CREATE TABLE `veiculos` (
   `marca` varchar(100) NOT NULL,
   `modelo` varchar(100) NOT NULL,
   `ano` int(4) NOT NULL,
-  `placa` varchar(7) NOT NULL
+  `placa` varchar(7) NOT NULL,
+  `cadastrador` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `veiculos`
 --
 
-INSERT INTO `veiculos` (`id`, `marca`, `modelo`, `ano`, `placa`) VALUES
-(47, 'CHEV', 'prisma', 2027, 'QFM4B74'),
-(48, 'VW', 'gol', 2013, 'OJZ1368'),
-(49, 'Toyota', 'hilux', 2022, 'QFN3B44');
+INSERT INTO `veiculos` (`id`, `marca`, `modelo`, `ano`, `placa`, `cadastrador`) VALUES
+(50, 'CHEV', 'prisma', 2017, 'QFM4B74', 'Lauam'),
+(51, 'Toyota', 'hilux', 2024, 'QFN3B44', 'Lauam');
 
 --
 -- Índices para tabelas despejadas
@@ -97,7 +97,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `veiculos`
 --
 ALTER TABLE `veiculos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
